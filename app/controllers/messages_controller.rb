@@ -1,6 +1,6 @@
 class MessagesController < ApplicationController
   def index
-    messages = Message.all
+    messages = Message.all.order(:id)
     render :json => messages
   end
 
